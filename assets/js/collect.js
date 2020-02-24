@@ -17,8 +17,7 @@ var dataRecorder = {
         dataRecorder.getBrowser();
     },
     track: function(localevent) {
-        console.log("tracking")
-            /* Collect and send data */
+        /* Collect and send data */
         var track = {};
         track['d_path'] = dataRecorder.getElementPathByEvent(localevent);
         track['userid'] = dataRecorder.userID;
@@ -57,7 +56,7 @@ var dataRecorder = {
         dataRecorder.hasTouch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
     },
     getUserId: function() {
-        dataRecorder.userID = window.userID || "weihuan";
+        dataRecorder.userID = window.userID;
     },
     getElementPathByEvent: function(event) {
         var target = event.target;
@@ -104,7 +103,6 @@ var eventLoader = {
     windowFrames: {},
     definedEvents: {
         handleMouseMove: function(event) {
-            console.log("load3")
             dataRecorder.track(event)
         },
         handleMouseDown: function(event) {

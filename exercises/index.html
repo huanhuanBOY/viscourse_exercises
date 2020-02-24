@@ -3,16 +3,29 @@
 
 <head>
     <title>Vis course exercise</title>
-    <link href="/public/assets/css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="/public/assets/js/parse.js"></script>
+    <link href="/viscourse_exercises/assets/css/style.css" rel="stylesheet">
+    <link href="/viscourse_exercises/assets/css/sid.css" rel="stylesheet">
+    <script type="text/javascript" src="/viscourse_exercises/assets/js/parse.js"></script>
 </head>
 
 <body>
-    <div class="container">
-
+    <div id="sid_container" class="sid_container">
+        <h2>Visualization exercise details<small>Input student ID and go through the exercise details</small></h2>
+        <div class="sid_group">
+            <input id="sid_value" type="text" required>
+            <span class="sid_highlight"></span>
+            <span class="sid_bar"></span>
+            <label class="sid_label">StudentID</label>
+            <img id="sid_login" class="sid_login" src="/viscourse_exercises/assets/images/login.png" />
+        </div>
+        <p class="sid_footer">
+            A visualization exercise platform by <a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a>
+        </p>
+    </div>
+    <div id="id_exercise" class="container" style="display:none">
         <div class="pure-g step--container">
             <div class="pure-u-4-5 advice">
-                <p><strong>As the coronavirus outbreak continues to spread across China and other countries in the world, the global confirmed cases now exceed 78,000 and the global death toll is at least 2458. All sectors of the society in China and the world have been working together to fight for the new coronavirus. Among them, researchers and social media try to utilize visualization to inform the public about the virus-related data.
+                <p><strong>As the coronavirus outbreak continues to spread across China and other countries in the world, the global confirmed cases now exceed 78,000 and the global death toll is at least 2458. All sectors of the society in China and the world have been working together to fight for the new coronavirus. Among them, researchers and social media try to utilize visualization to inform the viscourse_exercises about the virus-related data.
                 </strong></p>
                 <p><strong>In the following, there are four visualizations to show the change of the death toll and other related information. 
                 <ul>
@@ -25,21 +38,21 @@
             </div>
 
             <div clss="pure-u-4-5 advice">
-            <p> <b> Visualization 1 </b></p>
+                <p> <b> Visualization 1 </b></p>
             </div>
             <div class="align-center">
-                <img src="/public/assets/images/ex1/img1.png">
+                <img src="/viscourse_exercises/assets/images/ex1/img1.png">
             </div>
         </div>
 
-            
+
         <div class="pure-g step--container">
             <div clss="pure-u-4-5 advice">
-            <p> <b> Visualization 2 </b></p>
+                <p> <b> Visualization 2 </b></p>
             </div>
             <div class="align-center">
                 <video width="600" height="420" controls>
-                <source src="/public/assets/images/ex1/animation.mp4" type="video/mp4">
+                <source src="/viscourse_exercises/assets/images/ex1/animation.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
             </div>
@@ -47,30 +60,33 @@
 
         <div class="pure-g step--container">
             <div clss="pure-u-4-5 advice">
-            <p> <b> Visualization 3 </b></p>
+                <p> <b> Visualization 3 </b></p>
             </div>
             <div class="pure-u-4-5 advice">
                 <p><strong>The color of each square represents whether the number of confirmed cases drops or rises compared with the previous day. The number below each square represents the change of the confirmed case compared with the previous day. * means that a different scale has been applied.</strong></p>
             </div>
             <div class="align-center">
-                <img width="1200" src="/public/assets/images/ex1/img3.png">
+                <img width="1200" src="/viscourse_exercises/assets/images/ex1/img3.png">
             </div>
         </div>
 
         <div class="pure-g step--container">
             <div clss="pure-u-4-5 advice">
-            <p> <b> Visualization 4 </b></p>
+                <p> <b> Visualization 4 </b></p>
             </div>
             <div class="pure-u-4-5 advice">
                 <p><strong>Each axis in the radical chart represents a province in China. Red color represents the death and green color represent the heal.</strong></p>
             </div>
             <div class="align-center">
                 <video width="747" height="400" controls>
-                <source src="/public/assets/images/ex1/radar.mp4" type="video/mp4">
+                <source src="/viscourse_exercises/assets/images/ex1/radar.mp4" type="video/mp4">
                  Your browser does not support the video tag.
             </div>
         </div>
-
+        <div class="pure-g step--container">
+            <h2><button id="submit_button">Submit Answers</button></h2>
+        </div>
+        
         <footer id="footer" class="align-center">
             <ul>
                 <li><a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a></li>
@@ -79,7 +95,8 @@
             </ul>
         </footer>
     </div>
-    <script type="text/javascript" src="/public/assets/js/collect.js"></script>
+    <script type="text/javascript" src="/viscourse_exercises/assets/js/control.js"></script>
+    <script type="text/javascript" src="/viscourse_exercises/assets/js/collect.js"></script>
 </body>
 
 </html>
