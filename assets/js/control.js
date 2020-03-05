@@ -5,6 +5,7 @@ var userid = url.searchParams.get("userid");
 if (userid && userid.length >= 3) {
     document.getElementById("sid_container").style["display"] = "none"
     document.getElementById("id_exercise").style["display"] = "block"
+    window.userID = userid;
 }
 document.getElementById("sid_login").addEventListener("click", function() {
     let s = document.getElementById("sid_value").value;
