@@ -1,11 +1,13 @@
+let userid = ""
 if (getCookie('userid') && getCookie('userid').length >= 3) {
+    userid = getCookie('userid')
     document.getElementById("sid_container").style["display"] = "none"
     document.getElementById("id_exercise").style["display"] = "block"
     window.userID = userid;
 } else {
     let url_string = window.location.href
     var url = new URL(url_string);
-    let userid = url.searchParams.get("userid");
+    userid = url.searchParams.get("userid");
     if (userid && userid.length >= 3) {
         var userid = "bbs_" + userid;
         document.getElementById("sid_container").style["display"] = "none"
