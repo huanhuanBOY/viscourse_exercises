@@ -46,7 +46,7 @@ var dataRecorder = {
     submitData: function(parseObjList) {
         Parse.Object.saveAll(parseObjList)
             .then(function(parseObjList) {
-                console.log("Success", parseObjList);
+                console.log("Success");
             })
             .catch(function(e) {
                 alert("Error saving test object!" + e.message);
