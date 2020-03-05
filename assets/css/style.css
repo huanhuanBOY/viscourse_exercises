@@ -253,7 +253,7 @@ a:visited {
     box-sizing: border-box;
 }
 
-#submit_button {
+.submit_button {
     font-size: 24px;
     background: #eb4d1c;
     border: none;
