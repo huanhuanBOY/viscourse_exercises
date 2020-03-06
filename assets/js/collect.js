@@ -38,7 +38,7 @@ var dataRecorder = {
         }
         dataRecorder.framepool.push(new Parse.Object("Test", track))
         dataRecorder.count++;
-        if (dataRecorder.count > 19) {
+        if (dataRecorder.count > 199) {
             dataRecorder.count = 0;
             dataRecorder.submitData(dataRecorder.framepool);
         }
