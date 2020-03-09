@@ -56,7 +56,7 @@ var dataRecorder = {
         dataRecorder.hasTouch = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
     },
     getUserId: function() {
-        dataRecorder.userID = window.userID;
+        dataRecorder.userID = window.userID || userid;
     },
     getElementPathByEvent: function(event) {
         var target = event.target;
