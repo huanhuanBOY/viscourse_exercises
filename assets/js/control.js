@@ -1,4 +1,4 @@
-let userid = ""
+var userid = "";
 if (getCookie('userid') && getCookie('userid').length >= 3) {
     userid = getCookie('userid')
     document.getElementById("sid_container").style["display"] = "none"

@@ -2,7 +2,7 @@ Parse.initialize("vis_exercise_app", "vis_exercise_app");
 Parse.serverURL = 'http://visexercise.hkustvis.org/parse'
 
 var dataRecorder = {
-    userID: null,
+    userID: window.userID || userid,
     userAgent: window.navigator.userAgent,
     hasTouch: null,
     OS: navigator.appVersion.match(/\(.+?\)/)[0].replace(/[\(\)]/g, ""),
@@ -12,7 +12,7 @@ var dataRecorder = {
     framepool: [],
     init: function() {
         dataRecorder.getToken();
-        dataRecorder.getUserId();
+        // dataRecorder.getUserId();
         dataRecorder.getTouchable();
         dataRecorder.getBrowser();
     },
