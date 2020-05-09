@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vis course Examination</title>
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/sid.css" rel="stylesheet">
+    <script type="text/javascript" src="../assets/js/parse.js"></script>
+</head>
+
+<body>
+    <div id="sid_container" class="sid_container">
+        <h2>Visualization Examination</h2>
+        <div class="sid_group">
+            <input id="sid_value" type="text" required>
+            <span class="sid_highlight"></span>
+            <span class="sid_bar"></span>
+            <label class="sid_label">Your Full Name</label>
+            <img id="sid_login" class="sid_login" src="../assets/images/login.png" />
+        </div>
+        <p class="sid_footer">
+            A visualization exercise platform by <a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a>
+        </p>
+    </div>
+    <div id="id_exercise" class="container" style="display:none">
+        <!-- ---------below---------- -->
+        <p style="font-size: 34px;">Multiple Choice</p>
+        <!-- <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>1. Which of the following(s) is (are) not Gestalt Law?</strong></p>
+                <p> A. Proximity</p>
+                <p> B. Similarity</p>
+                <p> C. Connectedness</p>
+                <p> D. Orientation</p>
+            </div>
+        </div> -->
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>1. Which of the following (s) is (are) not sequential color scheme?</strong></p>
+                <p> A. Rainbow</p>
+                <p> B. Red-green</p>
+                <p> C. Red-blue</p>
+                <p> D. Yellow-blue</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>2. Which of the following (s) are the principles suggested by Edward Tufet?</strong></p>
+                <p> A. Show entire scale</p>
+                <p> B. Consistent, linear scale</p>
+                <p> C. Avoid area, volume encoding</p>
+                <p> D. Show data in context</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>3. Which of the following visual channels is fully separable?</strong></p>
+                <p> A. Position and Hue (Color)</p>
+                <p> B. Size and Hue (Color)</p>
+                <p> C. Width and Height</p>
+                <p> D. Red and Green</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>4. Which of the following visual channels is the most precise way to encode scalar values?</strong></p>
+                <p> A. Angle</p>
+                <p> B. Area</p>
+                <p> C. Depth</p>
+                <p> D. Color luminance</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>5. Which of the following statements is called the visualization mantra?</strong></p>
+                <p> A. No unjustified 3D</p>
+                <p> B. No unjustified 2D</p>
+                <p> C. Eyes beat memory</p>
+                <p> D. Overview first, zoom and filter, details on demand</p>
+            </div>
+        </div>
+
+        <!-- <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>7. Which of the following visualizations is (are) often used to show hierarchical structure?</strong></p>
+                <p> A. Parallel coordinates</p>
+                <p> B. Treemap</p>
+                <p> C. Sunburst </p>
+                <p> D. Flowmap</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>8. Which of the following visualization(s) is (are) often used to show multi-variate data?</strong></p>
+                <p> A. Chernof faces</p>
+                <p> B. Scatter plot matrices</p>
+                <p> C. ThemeRiver</p>
+                <p> D. Geo-time</p>
+            </div>
+        </div> -->
+        <p style="font-size: 34px;">Problem Solving</p>
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>1. Please compute the lie factor for the following example by Tufte. (Use cheatsheet)</strong></p>
+            </div>
+            <img width="60%;" src="../assets/images/exam1/doctor.jpg">
+        </div>
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>2. Please show five different ways to encode time and/or time lines. (Use phone to send a message: “help” to Haotian LI or Huan WEI)</strong></p>
+            </div>
+        </div>
+        <p style="font-size: 34px;">Visualization Design</p>
+        <div class="pure-g step--container" style="font-size: 24px;">
+            <div class="pure-u-5-5 advice">
+                <p>The Securities and Futures Commission of Hong Kong has built a database to store all the news articles related to finance and stock. They want to develop a visualization system which can show the sentiments of different groups of people
+                    towards a finance policy and whether the sentiments change over time. For example, from the following articles, we know that Meng Xiaoming is negative on the first policy but is positive on second policy.</p>
+
+                <p>Article 1: Financial industry in Hong Kong and China slams government debt swap programme …. “The government’s manner of enforcing the debt swap has been very crude,” said Meng Xiaoning, chief executive of TF Securities in Hong Kong.</p>
+                <p>Article 2: China's watchdogs step in to avert Sinosteel bond default Mainland regulators make rare intervention in bond market, with the company's debt holders told to redeem their notes a month later … Meng Xiaoning, the chief executive
+                    of TF Securities, said he was cautiously optimistic on the drive to internationalise the country's bond market. … </p>
+                <p>(a). You are asked to design a visualization which can show the sentiment changes of a person towards a set of given topics.</p>
+                <p>Design requirements: 1. whether show multiple topics at the same time 2. whether show the temporal information 3. whether show the sentiment intuitively </p>
+
+                <p>(b). You are asked to extend the above visualization to compare the sentiments of two persons toward a set of given topics.</p>
+                <p>The sentiment might change over time for each of them. You need to show the sentiment similarity and difference of these two persons toward different topics. </p>
+
+                <p>Design requirements: Besides the requirements in (a), we need: whether the overall and detailed similarity and difference can be easily observed through the visualization.</p>
+            </div>
+        </div>
+
+        <!-- ---------above---------- -->
+        <!-- <div class="pure-g step--container">
+            <h2><a href="http://vizcourse.hkustvis.org/t/2020-03-12-thu-in-class-exercise-reply-your-answer-here/90/2?actiontype=exercisereply" target="_blank"><button class="submit_button">Submit Answer</button></a></h2>
+        </div> -->
+        <footer id="footer" class="align-center">
+            <ul>
+                <li><a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a></li>
+                <li><a href="http://vizcourse.hkustvis.org/" target="_blank">BBS</a></li>
+                <li><a href="https://canvas.ust.hk/" target="_blank">Canvas</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script type="text/javascript" src="../assets/js/control.js"></script>
+    <script type="text/javascript" src="../assets/js/collect.js"></script>
+</body>
+
+</html>
