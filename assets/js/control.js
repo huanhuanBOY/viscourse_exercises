@@ -29,12 +29,35 @@ if (getCookie('userid') && getCookie('userid').length >= 3) {
         //     }
         // })*/
         document.getElementById("sid_login").addEventListener("click", function() {
-            let userid = document.getElementById("sid_value").value;
-            userid = "ipt_" + userid;
-            window.userID = userid
-            document.getElementById("sid_container").style["display"] = "none"
-            document.getElementById("id_exercise").style["display"] = "block"
-            document.cookie = "userid=" + userid;
+            let userid_ = document.getElementById("sid_value").value;
+            var sid = { "000TT0":1, "011TT1":1, "022TT2":1, "1":1 }
+            
+            if (userid_ in sid) {
+                userid = "ipt_" + userid_;
+                console.log(userid_[2])
+                window.userID = userid
+                document.getElementById("sid_container").style["display"] = "none"
+                document.getElementById("id_exercise").style["display"] = "block"
+                if (userid_[2] == 1) {
+                    // document.getElementsByClassName("hints").style["display"] = "block"
+                }
+                else if (userid_[2] == 2){
+                    document.getElementById("hints_2").style["display"] = "block"
+                    var hints = document.getElementsByClassName("hints")
+                    for(var i=0; i<hints.length; i++){
+                        hints[i].style.display = 'none'
+                    }
+                }
+                else{
+                    var hints = document.getElementsByClassName("hints")
+                    for(var i=0; i<hints.length; i++){
+                        hints[i].style.display = 'none'
+                    }
+                }
+                document.cookie = "userid=" + userid;
+            } else {
+                alert("Email head is not correct!!")
+            }
         })
     }
 }
