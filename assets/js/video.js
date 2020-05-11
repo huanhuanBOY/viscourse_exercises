@@ -1,12 +1,12 @@
 var options = {
     controls: true,
-    width: 1280,
-    height: 720,
+    width: 320,
+    height: 240,
     plugins: {
         record: {
             audio: true,
             video: true,
-            maxLength: 2100,
+            maxLength: 2400,
             debug: true
         }
     }
@@ -42,5 +42,5 @@ player.on('finishRecord', function() {
     // the blob object contains the recorded data that
     // can be downloaded by the user, stored on server etc.
     // console.log('finished recording: ', player.recordedData);
-    player.record().saveAs({'video': 'my-video-file-name.webm'});
+    player.record().saveAs({'video': `${window.userID}.webm`});
 });
