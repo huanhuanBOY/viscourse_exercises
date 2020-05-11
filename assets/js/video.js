@@ -25,6 +25,7 @@ var player = videojs('myVideo', options, function() {
 
 // error handling
 player.on('deviceError', function() {
+
     console.log('device error:', player.deviceErrorCode);
 });
 
@@ -34,6 +35,7 @@ player.on('error', function(element, error) {
 
 // user clicked the record button and started recording
 player.on('startRecord', function() {
+    dataRecorder.track({ "state": "startRecording" })
     console.log('started recording!');
 });
 
@@ -42,5 +44,6 @@ player.on('finishRecord', function() {
     // the blob object contains the recorded data that
     // can be downloaded by the user, stored on server etc.
     // console.log('finished recording: ', player.recordedData);
-    player.record().saveAs({'video': `${window.userID}.webm`});
+    dataRecorder.track({ "state": "stopRecording" })
+    player.record().saveAs({ 'video': `${window.userID}.webm` });
 });
