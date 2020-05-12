@@ -19,15 +19,17 @@ var dataRecorder = {
     track: function(localevent) {
         /* Collect and send data */
         var track = {};
-        track['d_path'] = dataRecorder.getElementPathByEvent(localevent);
         track['userid'] = dataRecorder.userID;
         track['osVersion'] = dataRecorder.OS;
         track['browser'] = dataRecorder.Browser;
         track['hastouch'] = dataRecorder.hasTouch;
         track['d_timestamp'] = (new Date()).getTime();
-        track["d_source"] = localevent.view.location.href;
-        track["d_clientWidth"] = localevent.srcElement.clientWidth;
-        track["d_clientHeight"] = localevent.srcElement.clientHeight;
+        if (Object.keys(localevent).length > 3) {
+            track['d_path'] = dataRecorder.getElementPathByEvent(localevent);
+            track["d_source"] = localevent.view.location.href;
+            track["d_clientWidth"] = localevent.srcElement.clientWidth;
+            track["d_clientHeight"] = localevent.srcElement.clientHeight;
+        }
         for (var key in localevent) {
             if (typeof(localevent[key]) != "object") {
                 track[key] = localevent[key];
