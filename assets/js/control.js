@@ -30,7 +30,7 @@ if (getCookie('userid') && getCookie('userid').length >= 3) {
         // })*/
         document.getElementById("sid_login").addEventListener("click", function() {
             let userid_ = document.getElementById("sid_value").value;
-            var sid = { "000TT0":1, "011TT1":1, "022TT2":1, "1":1 }
+            var sid = { "000TT":1, "011TT":1, "022TT":1, "1":1, "000ha":1,"011me":1,"020yo":1,"030xi":1,"041le":1,"051zh":1,"061to":1,"071ki":1,"082mi":1,"092yu":1,"101re":1,"112jo":1,"120mu":1,"132qi":1,"142do":1,"152ze":1,"160ta":1,"171li":1,"181wu":1,"192ja":1,"202zh":1,"211fu":1,"222ke":1,"232yi":1,"241st":1,"252we":1,"260zr":1,"270xi":1 }
             
             if (userid_ in sid) {
                 userid = "ipt_" + userid_;
@@ -54,7 +54,7 @@ if (getCookie('userid') && getCookie('userid').length >= 3) {
                         hints[i].style.display = 'none'
                     }
                 }
-                document.cookie = "userid=" + userid;
+                // document.cookie = "userid=" + userid;
             } else {
                 alert("Email head is not correct!!")
             }
