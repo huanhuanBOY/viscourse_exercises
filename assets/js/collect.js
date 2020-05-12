@@ -59,6 +59,9 @@ var dataRecorder = {
         dataRecorder.userID = window.userID || userid;
     },
     getElementPathByEvent: function(event) {
+        if (!event.target) {
+            return " "
+        }
         var target = event.target;
         var pathstr = "";
         pathstr = "," + target.tagName + "#" + target.id + "." + target.classList.value.replace(/ /g, ".") + pathstr;
