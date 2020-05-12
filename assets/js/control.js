@@ -54,7 +54,7 @@ if (getCookie('userid') && getCookie('userid').length >= 3) {
                         hints[i].style.display = 'none'
                     }
                 }
-                // document.cookie = "userid=" + userid;
+                document.cookie = "userid=" + userid;
             } else {
                 alert("Email head is not correct!!")
             }
