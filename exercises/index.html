@@ -2,91 +2,179 @@
 <html lang="en">
 
 <head>
-    <title>Vis course exercise</title>
+    <title>Vis course Examination</title>
     <link href="/viscourse_exercises/assets/css/style.css" rel="stylesheet">
     <link href="/viscourse_exercises/assets/css/sid.css" rel="stylesheet">
     <script type="text/javascript" src="/viscourse_exercises/assets/js/parse.js"></script>
+
+    <link href="//vjs.zencdn.net/7.6.6/video-js.min.css" rel="stylesheet">
+    <link href="/viscourse_exercises/assets/css/videojs.record.min.css" rel="stylesheet">
+    <link href="/viscourse_exercises/assets/css/video.css" rel="stylesheet">
+
+    <script src="//vjs.zencdn.net/7.6.6/video.min.js"></script>
+    <script src="//unpkg.com/recordrtc/RecordRTC.js"></script>
+    <script src="//unpkg.com/webrtc-adapter/out/adapter.js"></script>
+
+    <script src="/viscourse_exercises/assets/js/videojs.record.min.js"></script>
+
+    <script src="/viscourse_exercises/assets/js/browser-workarounds.js"></script>
 </head>
 
 <body>
     <div id="sid_container" class="sid_container">
-        <h2>Visualization exercise details<small>Input student ID and go through the exercise details</small></h2>
+        <h2>Visualization Examination</h2>
+        <strong>Please enter your test ID in lower case.</strong>
         <div class="sid_group">
             <input id="sid_value" type="text" required>
             <span class="sid_highlight"></span>
             <span class="sid_bar"></span>
-            <label class="sid_label">StuID or Email head</label>
+            <label class="sid_label">Your test ID</label>
             <img id="sid_login" class="sid_login" src="/viscourse_exercises/assets/images/login.png" />
         </div>
         <p class="sid_footer">
             A visualization exercise platform by <a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a>
         </p>
     </div>
-    <div id="id_exercise" class="container">
+    <video id="myVideo" playsinline class="video-js vjs-default-skin">
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, or consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">
+            supports HTML5 video.
+          </a>
+        </p>
+    </video>
+    <div id="id_exercise" class="container" style="display:none">
+        <!-- ---------below---------- -->
+        <p id="hints_2" style="display: none; font-size: 20px;">Since you are in group 2, your cheating method is unlimited. For each question, you may decide to cheat or not. If you decide to cheat on a question, please use <strong>one</strong> method and record the method you use. You will be asked to finish
+            a questionnaire after the test. We suggest some possible cheating methods: use phone to search, use cheatsheet, use notes, open a new tab and search. <strong>Please at least cheat for 2 times.</strong></p>
+        <p style="font-size: 34px;">Multiple Choice</p>
+        <p style="font-size: 20px; color: red">Please notice that some questions may not have only one answer.</p>
         <div class="pure-g step--container">
             <div class="pure-u-4-5 advice">
-                <p><strong>As the coronavirus outbreak continues to spread across China and other countries in the world, the global confirmed cases now exceed 78,000 and the global death toll is at least 2458. All sectors of the society in China and the world have been working together to fight for the new coronavirus. Among them, researchers and social media try to utilize visualization to inform the viscourse_exercises about the virus-related data.
-                </strong></p>
-                <p><strong>In the following, there are four visualizations to show the change of the death toll and other related information. 
-                <ul>
-                <li>Please read them carefully and summarize the insights you find, strengths, weakness, and the way to improve for this kind of time-series data <font color="red"> for each visualization</font>.</li>
-                <li>Please also rank the four visualizations according to your analysis.</li>
-                <li>Please submit your pdf file through Canvas. </li>
-                </ul>
-                <li>PS: Welcome to discuss on BBS and upload related visualizations.</li>
-                </strong></p>
-            </div>
-
-            <div clss="pure-u-4-5 advice">
-                <p> <b> Visualization 1 </b></p>
-            </div>
-            <div class="align-center">
-                <img src="/viscourse_exercises/assets/images/ex1/img1.png">
-            </div>
-        </div>
-
-
-        <div class="pure-g step--container">
-            <div clss="pure-u-4-5 advice">
-                <p> <b> Visualization 2 </b></p>
-            </div>
-            <div class="align-center">
-                <video width="600" height="420" controls>
-                <source src="/viscourse_exercises/assets/images/ex1/animation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
+                <p><strong>1. Which of the following(s) is (are) not Gestalt Law?</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Use cheatsheet</p>
+                <p> A. Proximity</p>
+                <p> B. Similarity</p>
+                <p> C. Connectedness</p>
+                <p> D. Orientation</p>
             </div>
         </div>
 
         <div class="pure-g step--container">
-            <div clss="pure-u-4-5 advice">
-                <p> <b> Visualization 3 </b></p>
-            </div>
             <div class="pure-u-4-5 advice">
-                <p><strong>The color of each square represents whether the number of confirmed cases drops or rises compared with the previous day. The number below each square represents the change of the confirmed case compared with the previous day. * means that a different scale has been applied.</strong></p>
-            </div>
-            <div class="align-center">
-                <img width="1200" src="/viscourse_exercises/assets/images/ex1/img3.png">
+                <p><strong>2. Which of the following (s) is (are) not sequential color scheme?</strong></p>
+                <p class="hints" style="color: red;">Do not cheat on this question</p>
+                <p> A. Rainbow</p>
+                <p> B. Red-green</p>
+                <p> C. Red-blue</p>
+                <p> D. Yellow-blue</p>
             </div>
         </div>
 
         <div class="pure-g step--container">
-            <div clss="pure-u-4-5 advice">
-                <p> <b> Visualization 4 </b></p>
-            </div>
             <div class="pure-u-4-5 advice">
-                <p><strong>Each axis in the radical chart represents a province in China. Red color represents the death and green color represent the heal.</strong></p>
+                <p><strong>3. Which of the following (s) are the principles suggested by Edward Tufet?</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Use mobilephone to search</p>
+                <p> A. Show entire scale</p>
+                <p> B. Consistent, linear scale</p>
+                <p> C. Avoid area, volume encoding</p>
+                <p> D. Show data in context</p>
             </div>
-            <div class="align-center">
-                <video width="747" height="400" controls>
-                <source src="/viscourse_exercises/assets/images/ex1/radar.mp4" type="video/mp4">
-                 Your browser does not support the video tag.
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>4. Which of the following visual channels is fully separable?</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Use notes “data_visual.pdf”</p>
+                <p> A. Position and Hue (Color)</p>
+                <p> B. Size and Hue (Color)</p>
+                <p> C. Width and Height</p>
+                <p> D. Red and Green</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>5. Which of the following visual channels is the most effective way to encode scalar values?</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Use cheatsheet</p>
+                <p> A. Angle</p>
+                <p> B. Area</p>
+                <p> C. Depth</p>
+                <p> D. Color luminance</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>6. Which of the following visualizations is (are) often used to show hierarchical structure?</strong></p>
+                <p class="hints" style="color: red;">Do not cheat on this question</p>
+                <p> A. Parallel coordinates</p>
+                <p> B. Treemap</p>
+                <p> C. Sunburst </p>
+                <p> D. Flowmap</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>7. Which of the following statements is called the visualization mantra?</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Open a new tab and search</p>
+                <p> A. No unjustified 3D</p>
+                <p> B. No unjustified 2D</p>
+                <p> C. Eyes beat memory</p>
+                <p> D. Overview first, zoom and filter, details on demand</p>
+            </div>
+        </div>
+
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>8. Which of the following visualization(s) is (are) often used to show multi-variate data?</strong></p>
+                <p class="hints" style="color: red;">Do not cheat on this question</p>
+                <p> A. Chernof faces</p>
+                <p> B. Scatter plot matrices</p>
+                <p> C. ThemeRiver</p>
+                <p> D. Geo-time</p>
+            </div>
+        </div>
+        <p style="font-size: 34px;">Problem Solving</p>
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>1. Please compute the lie factor for the following example by Tufte. In the example, the number encodes year and the percentage respectively.</strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Use cheatsheet</p>
+            </div>
+            <img width="30%;" src="/viscourse_exercises/assets/images/exam1/doctor.jpg">
+        </div>
+        <div class="pure-g step--container">
+            <div class="pure-u-4-5 advice">
+                <p><strong>2. Please show five different ways to encode temporal data in visualization. </strong></p>
+                <p class="hints" style="color: red;">Cheating hints: Open a new tab and search</p>
             </div>
         </div>
         <div class="pure-g step--container">
-          <h2><a href="http://vizcourse.hkustvis.org/t/2020-03-05-thu-in-class-exercise/64?actiontype=exercisereply" target="_blank"><button class="submit_button">Submit Answer</button></a></h2>
+            <div class="pure-u-4-5 advice">
+                <p><strong>3. In the above parallel coordinates view, please write down all the patterns you find (e.g., U=1/V).  </strong></p>
+                <p class="hints" style="color: red;">Do not cheat on this question</p>
+            </div>
+            <img width="50%;" src="/viscourse_exercises/assets/images/exam1/paracoord.png">
         </div>
-        
+        <p style="font-size: 34px;">Visualization Design</p>
+        <div class="pure-g step--container" style="font-size: 14px;">
+            <div class="pure-u-5-5 advice">
+                <p><strong>Visualization shows Prof. Qu’s collaboration network:</strong></p>
+                <img width="60%;" src="/viscourse_exercises/assets/images/exam1/designP.jpg">
+                <p><strong>Each node represent a collaborator and the numbers on links indicate the number of collaborated papers.</strong></p>
+                <p>a. If the graph keep growing (e.g., Prof. Qu has 1000 collaborators), how to handle visual clutter? </p>
+                <p class="hints" style="color: red;">Cheating hints: Use notes “large_graph.ppt”</p>
+                <p>b. How to show the evolution of Prof. Qu's collaboration network? (i.e., how does this network change over time?) Please design an example.</p>
+
+            </div>
+        </div>
+
+        <!-- ---------above---------- -->
+        <div class="pure-g step--container">
+            <h2><a href="https://ust.az1.qualtrics.com/jfe/form/SV_893ypEpJ5x3F3hP" target="_blank"><button class="submit_button">Submit Answer</button></a></h2>
+        </div>
         <footer id="footer" class="align-center">
             <ul>
                 <li><a href="http://vis.cse.ust.hk/" target="_blank">VisLab</a></li>
@@ -97,6 +185,7 @@
     </div>
     <script type="text/javascript" src="/viscourse_exercises/assets/js/control.js"></script>
     <script type="text/javascript" src="/viscourse_exercises/assets/js/collect.js"></script>
+    <script type="text/javascript" src="/viscourse_exercises/assets/js/video.js"></script>
 </body>
 
 </html>
