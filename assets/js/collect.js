@@ -38,7 +38,7 @@ var dataRecorder = {
         if (dataRecorder.count == 0) {
             dataRecorder.framepool = [];
         }
-        dataRecorder.framepool.push(new Parse.Object("Test_0511", track))
+        dataRecorder.framepool.push(new Parse.Object("experiment", track))
         dataRecorder.count++;
         if (dataRecorder.count > 199) {
             dataRecorder.count = 0;

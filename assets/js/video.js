@@ -6,7 +6,7 @@ var options = {
         record: {
             audio: true,
             video: true,
-            maxLength: 2100,
+            maxLength: 2500,
             debug: true
         }
     }
